@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="main_project.css" rel="stylesheet">
+<link href="index_rebuild.css" rel="stylesheet">
+<script src="jquery-3.6.0.min.js"></script>
+<script src="wb.overlay.min.js"></script>
+<script src="wb.drilldownmenu.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#OverlayMenu1-overlay').overlay({popup:true, hideTransition:true});
+   $('.OverlayMenu1').drilldownmenu({backText: 'Back'});
+   $('#OverlayMenu1').on('click', function(e)
+   {
+      $.overlay.toggle($('#OverlayMenu1-overlay'));
+      return false;
+   });
+   $("a[href*='#trendingLayoutGrid2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_trendingLayoutGrid2').offset().top-57 }, 600, 'easeOutSine');
+   });
+   $("a[href*='#LayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top-57 }, 600, 'easeOutSine');
+   });
+});
+</script>
+</head>
+<body>
+<div id="PageHeader1" style="position:absolute;text-align:left;left:0px;top:0px;width:100%;height:90px;z-index:7777;">
+<div id="wb_Image1" style="position:absolute;left:783px;top:19px;width:148px;height:53px;z-index:0;">
+<img src="images/logo.png" loading="lazy" id="Image1" alt="" width="148" height="54"></div>
+<div id="wb_Text1" style="position:absolute;left:887px;top:0px;width:250px;height:90px;text-align:center;z-index:1;">
+<span style="color:#FFFFFF;font-family:Bahnschrift;font-size:75px;"><strong><em>NIKE</em></strong></span></div>
+<div id="wb_OverlayMenu1" style="position:absolute;left:0px;top:0px;width:85px;height:90px;z-index:2;">
+<a href="#" id="OverlayMenu1">
+<span class="line"></span>
+<span class="line">
+</span><span class="line"></span>
+</a>
+</div>
+</div>
+<a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb17.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin: 0;border-width:0;z-index:250" width="16" height="16"></a>
+<div id="FlexContainer1">
+<picture id="wb_Picture1" style="display:block;width:938px;z-index:3">
+<img src="images/bdcb0847c06ec389fe3b409fc9579e24.jpg" id="Picture1" alt="" width="938" height="623">
+</picture>
+</div>
+<div id="wb_trendingLayoutGrid2">
+<div id="trendingLayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_CmsCard1" style="display:flex;width:100%;text-align:center;z-index:4;" class="card">
+<?php
+   $cms_content = '';
+   $cms_create_date = '';
+   $cms_created_by = '';
+   $cms_description = '';
+   $cms_extra_data = '';
+   $cms_keywords = '';
+   $cms_last_update_date = '';
+   $cms_name = '';
+   $cms_page_id = 0;
+   $cms_title = '';
+   $cms_views = '';
+   $db = mysqli_connect('localhost', 'root', 'root');
+   if (!$db)
+   {
+      die('Failed to connect to database server!<br>'.mysqli_error($db));
+   }
+   mysqli_select_db($db, 'WEB_DATA') or die('Failed to select database<br>'.mysqli_error($db));
+   mysqli_query($db, 'SET NAMES "UTF8"');
+   mysqli_query($db, "SET collation_connection='utf8_general_ci'");
+   mysqli_query($db, "SET collation_server='utf8_general_ci'");
+   mysqli_query($db, "SET character_set_client='utf8'");
+   mysqli_query($db, "SET character_set_connection='utf8'");
+   mysqli_query($db, "SET character_set_results='utf8'");
+   mysqli_query($db, "SET character_set_server='utf8'");
+   mysqli_set_charset($db, 'utf8');
+   $sql = "SELECT * FROM CMS_PAGES WHERE id = 0 AND visible = 1";
+   $result = mysqli_query($db, $sql);
+   if ($result)
+   {
+      if ($data = mysqli_fetch_array($result))
+      {
+         $cms_content = $data['content'];
+         $cms_create_date = $data['create_date'];
+         $cms_created_by = $data['created_by'];
+         $cms_description = $data['description'];
+         $cms_extra_data = $data['extra_data'];
+         $cms_keywords = $data['keywords'];
+         $cms_last_update_date = $data['last_update_date'];
+         $cms_name = $data['name'];
+         $cms_page_id = $data['id'];
+         $cms_title = $data['title'];
+         $cms_views = $data['views'];
+      }
+   }
+   mysqli_close($db);
+?>
+   <div id="CmsCard1-card-body">
+      <img id="CmsCard1-card-item0" src="images/Без названия (2).jpg" width="225" height="225" alt="" title="">
+      <div id="CmsCard1-card-item1"><?php echo $cms_title; ?></div>
+      <div id="CmsCard1-card-item2"><?php echo $cms_content; ?></div>
+      <hr id="CmsCard1-card-item3">
+      <div id="CmsCard1-card-item4"><a href="./index.html?page=<?php echo $cms_page_id; ?>">Read More</a></div>
+   </div>
+</div>
+</div>
+<div class="col-2">
+</div>
+<div class="col-3">
+</div>
+<div class="col-4">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:5;">
+<img src="images/Без названия.jpg" id="Image2" alt="" width="630" height="852">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image3" style="display:inline-block;width:100%;height:auto;z-index:6;">
+<img src="images/images.jpg" id="Image3" alt="" width="630" height="630">
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Image4" style="display:inline-block;width:100%;height:auto;z-index:7;">
+<img src="images/b75303b357097bb20e57146d36979a2a.jpg" id="Image4" alt="" width="630" height="630">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text2">
+<span style="color:#FFFFFF;font-family:'Bahnschrift Condensed';font-size:75px;"><strong>NEW SOCCERS</strong></span>
+</div>
+<input type="submit" id="Button1" name="" value="Submit" style="display:inline-block;width:96px;height:24px;z-index:9;">
+<div id="wb_div_cust">
+&nbsp;
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="RollOver1" style="overflow:hidden;z-index:11">
+<a href="">
+<img class="hover" alt="" src="images/bdcb0847c06ec389fe3b409fc9579e24.jpg" width="930" height="617">
+<span><img alt="" src="images/bdcb0847c06ec389fe3b409fc9579e24.jpg" width="930" height="617"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_Heading7" style="display:inline-block;width:100%;z-index:12;">
+<h1 id="Heading7">УКАЖИ СОЦСЕТИ</h1>
+</div>
+<div id="wb_Shape3" style="display:inline-block;width:112px;height:3px;z-index:13;position:relative;">
+<div id="Shape3"></div>
+</div>
+<div id="wb_Heading6" style="display:inline-block;width:100%;z-index:14;">
+<h2 id="Heading6">Our new website is coming soon!</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card7" style="display:flex;width:100%;z-index:15;" class="card">
+   <div id="Card7-card-body">
+      <div id="Card7-card-item0"><i class="fa fa-pencil"></i></div>
+      <div id="Card7-card-item1">Web Design</div>
+      <div id="Card7-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card1" style="display:flex;width:100%;z-index:16;" class="card">
+   <div id="Card1-card-body">
+      <div id="Card1-card-item0"><i class="fa fa-comments-o"></i></div>
+      <div id="Card1-card-item1">Social Media</div>
+      <div id="Card1-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card2" style="display:flex;width:100%;z-index:17;" class="card">
+   <div id="Card2-card-body">
+      <div id="Card2-card-item0"><i class="fa fa-search"></i></div>
+      <div id="Card2-card-item1">SEO</div>
+      <div id="Card2-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card3" style="display:flex;width:100%;z-index:18;" class="card">
+   <div id="Card3-card-body">
+      <div id="Card3-card-item0"><i class="fa fa-code"></i></div>
+      <div id="Card3-card-item1">Programming</div>
+      <div id="Card3-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card4" style="display:flex;width:100%;z-index:19;" class="card">
+   <div id="Card4-card-body">
+      <div id="Card4-card-item0"><i class="fa fa-lock"></i></div>
+      <div id="Card4-card-item1">Security</div>
+      <div id="Card4-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card5" style="display:flex;width:100%;z-index:20;" class="card">
+   <div id="Card5-card-body">
+      <div id="Card5-card-item0"><i class="fa fa-line-chart"></i></div>
+      <div id="Card5-card-item1">Marketing</div>
+      <div id="Card5-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="PageFooter1" style="position:absolute;overflow:hidden;text-align:left;left:0px;top:3378px;width:100%;height:322px;z-index:32;">
+<div id="wb_Text3" style="position:absolute;left:838px;top:20px;width:245px;height:26px;text-align:center;z-index:21;">
+<span style="color:#FFFFFF;font-family:'Bahnschrift Condensed';font-size:21px;">7evenStudios 2022</span></div>
+</div>
+<div id="OverlayMenu1-overlay">
+<div class="OverlayMenu1">
+<ul class="drilldown-menu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-home overlay-icon"></i>Home</a></li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-book overlay-icon"></i>Blog</a>
+<ul class="drilldown-submenu" role="menu">
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-eye overlay-icon"></i>Design</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-html5 overlay-icon"></i>HTML</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-css3 overlay-icon"></i>CSS</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-code overlay-icon"></i>JavaScript</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-gear overlay-icon"></i>Work</a>
+<ul class="drilldown-submenu" role="menu">
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-desktop overlay-icon"></i>Web&nbsp;Design</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-picture-o overlay-icon"></i>Typography</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+<li>
+<a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-envelope overlay-icon"></i>Applications</a>
+<ul class="drilldown-submenu" role="menu">
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;1</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;2</a></li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect">Sub&nbsp;Menu&nbsp;3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a role="menuitem" href="#" class="OverlayMenu1-effect"><i class="fa fa-user overlay-icon"></i>About</a></li>
+   </ul>
+</div>
+</div>
+</body>
+</html>
